@@ -27,7 +27,7 @@ const projects = [
     description:
       "Jogo de aprendizado para plataforma Unity",
     stack: [{ name: "C#" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
-    image: "/assets/work/Unity1.png",
+    image: "/Unity1.png",
     live: "",
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
@@ -38,7 +38,7 @@ const projects = [
     description:
       "Jogo de aprendizado para plataforma Unity",
     stack: [{ name: "State Machine" }, { name: "Animações" }, { name: "Entidades" }],
-    image: "/assets/work/Unity2.png",
+    image: "/Unity2.png",
     live: "",
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
