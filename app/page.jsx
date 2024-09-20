@@ -51,7 +51,7 @@ const Home = () => {
   const [ref2, inView2] = useInView();
   const [ref3, inView3] = useInView();
 
-  // Verifica se a animação deve ser disparada (somente uma vez)
+  // Verifica se a animação deve ser disparada
   if (inView1 && !hasAnimated1) setHasAnimated1(true);
   if (inView2 && !hasAnimated2) setHasAnimated2(true);
   if (inView3 && !hasAnimated3) setHasAnimated3(true);

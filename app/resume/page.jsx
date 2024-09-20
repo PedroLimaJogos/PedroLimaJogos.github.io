@@ -36,7 +36,7 @@ const about = {
   ],
 };
 
-// experience data
+// experience
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "Experiência Profissional",
