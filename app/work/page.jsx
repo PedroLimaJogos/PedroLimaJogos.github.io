@@ -26,7 +26,7 @@ const projects = [
     title: "Plataforma 3D",
     description:
       "Jogo de aprendizado para plataforma Unity",
-    stack: [{ name: "C#" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
+    stack: [{ name: "Teste" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
     image: "/Unity1.png",
     live: "",
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
