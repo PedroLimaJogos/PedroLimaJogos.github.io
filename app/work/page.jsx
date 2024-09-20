@@ -22,36 +22,25 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project 1",
+    category: "Unity",
+    title: "Plataforma 3D",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+      "Jogo de aprendizado para plataforma Unity",
+    stack: [{ name: "C#" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
+    image: "/assets/work/Unity1.png",
     live: "",
-    github: "",
+    github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
   {
-    num: "02",
-    category: "fullstack",
-    title: "project 2",
+    num: "01",
+    category: "Unity",
+    title: "Plataforma 3D",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+      "Jogo de aprendizado para plataforma Unity",
+    stack: [{ name: "State Machine" }, { name: "Animações" }, { name: "Entidades" }],
+    image: "/assets/work/Unity2.png",
     live: "",
-    github: "",
-  },
-  {
-    num: "03",
-    category: "frontend",
-    title: "project 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
+    github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
 ];
 
@@ -133,7 +122,7 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-[70%]">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
@@ -148,12 +137,13 @@ const Work = () => {
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}
                       <div className="relative w-full h-full">
-                        <Image
-                          src={project.image}
-                          fill
-                          className="object-cover"
-                          alt=""
-                        />
+                      <Image
+  src={project.image}
+  fill
+  sizes="(max-width: 1280px) 100vw, (max-width: 1980px) 50vw, 33vw" // ajuste conforme necessário
+  className="object-cover"
+  alt=""
+/>
                       </div>
                     </div>
                   </SwiperSlide>
