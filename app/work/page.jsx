@@ -19,6 +19,9 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
+import unity1img from '../../public/unity1.jpg'
+import unity2img from '../../public/unity2.jpg'
+
 const projects = [
   {
     num: "01",
@@ -27,7 +30,7 @@ const projects = [
     description:
       "Jogo de aprendizado para plataforma Unity",
     stack: [{ name: "Teste" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
-    image: "/unity1.jpg",
+    image: unity1img,
     live: "",
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
@@ -38,7 +41,7 @@ const projects = [
     description:
       "Jogo de aprendizado para plataforma Unity",
     stack: [{ name: "State Machine" }, { name: "Animações" }, { name: "Entidades" }],
-    image: "/unity2.jpg",
+    image: unity2img,
     live: "",
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
