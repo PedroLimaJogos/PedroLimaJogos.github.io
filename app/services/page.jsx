@@ -70,7 +70,7 @@ const Services = () => {
                           <FaCheck className="text-primary text-3xl" />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Emprego atual</p>
+                          <p>Função atual</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>

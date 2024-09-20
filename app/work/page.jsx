@@ -25,7 +25,7 @@ const projects = [
     category: "Unity",
     title: "Plataforma 3D",
     description:
-      "Jogo de aprendizado para plataforma Unity",
+      "Jogo de plataforma 3D criado para aprendizado sobre a plataforma Unity",
     stack: [{ name: "C#" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
     image: "/assets/work/unity1.png",
     live: "",
@@ -36,7 +36,7 @@ const projects = [
     category: "Unity",
     title: "Plataforma 3D",
     description:
-      "Jogo de aprendizado para plataforma Unity",
+      "Jogo de plataforma 3D criado para aprendizado sobre a plataforma Unity",
     stack: [{ name: "State Machine" }, { name: "Animações" }, { name: "Entidades" }],
     image: "/assets/work/unity2.png",
     live: "",
@@ -107,7 +107,7 @@ const Work = () => {
                   </TooltipProvider>
                 </Link> */}
                 {/* github project button */}
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank" rel="noopener noreferrer">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
