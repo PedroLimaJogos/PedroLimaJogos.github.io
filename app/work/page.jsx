@@ -19,9 +19,6 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
-import unity1img from '../../public/unity1.jpg'
-import unity2img from '../../public/unity2.jpg'
-
 const projects = [
   {
     num: "01",
@@ -29,8 +26,8 @@ const projects = [
     title: "Plataforma 3D",
     description:
       "Jogo de aprendizado para plataforma Unity",
-    stack: [{ name: "Teste" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
-    image: unity1img,
+    stack: [{ name: "C#" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
+    image: "/assets/work/unity1.png",
     live: "",
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
@@ -41,7 +38,7 @@ const projects = [
     description:
       "Jogo de aprendizado para plataforma Unity",
     stack: [{ name: "State Machine" }, { name: "Animações" }, { name: "Entidades" }],
-    image: unity2img,
+    image: "/assets/work/unity2.png",
     live: "",
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
@@ -141,12 +138,12 @@ const Work = () => {
                       {/* image */}
                       <div className="relative w-full h-full">
                       <Image
-                          src={project.image}
-                          fill
-                          sizes="(max-width: 1280px) 100vw, (max-width: 1980px) 50vw, 33vw" // ajuste conforme necessário
-                          className="object-cover"
-                          alt={project.title}
-                        />
+  src={project.image}
+  fill
+  sizes="(max-width: 1280px) 100vw, (max-width: 1980px) 50vw, 33vw" // ajuste conforme necessário
+  className="object-cover"
+  alt=""
+/>
                       </div>
                     </div>
                   </SwiperSlide>
