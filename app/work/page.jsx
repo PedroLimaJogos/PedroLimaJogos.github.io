@@ -27,7 +27,7 @@ const projects = [
     description:
       "Jogo de aprendizado para plataforma Unity",
     stack: [{ name: "Teste" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
-    image: "/Unity1.png",
+    image: "/unity1.jpg",
     live: "",
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
@@ -38,7 +38,7 @@ const projects = [
     description:
       "Jogo de aprendizado para plataforma Unity",
     stack: [{ name: "State Machine" }, { name: "Animações" }, { name: "Entidades" }],
-    image: "/Unity2.png",
+    image: "/unity2.jpg",
     live: "",
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
@@ -138,12 +138,12 @@ const Work = () => {
                       {/* image */}
                       <div className="relative w-full h-full">
                       <Image
-  src={project.image}
-  fill
-  sizes="(max-width: 1280px) 100vw, (max-width: 1980px) 50vw, 33vw" // ajuste conforme necessário
-  className="object-cover"
-  alt=""
-/>
+                          src={project.image}
+                          fill
+                          sizes="(max-width: 1280px) 100vw, (max-width: 1980px) 50vw, 33vw" // ajuste conforme necessário
+                          className="object-cover"
+                          alt={project.title}
+                        />
                       </div>
                     </div>
                   </SwiperSlide>
