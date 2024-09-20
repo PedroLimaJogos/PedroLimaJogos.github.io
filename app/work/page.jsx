@@ -32,7 +32,7 @@ const projects = [
     github: "https://github.com/PedroLimaJogos/3D_Platformer",
   },
   {
-    num: "01",
+    num: "02",
     category: "Unity",
     title: "Plataforma 3D",
     description:
@@ -94,7 +94,7 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
+                {/* <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -105,7 +105,7 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link> */}
                 {/* github project button */}
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>

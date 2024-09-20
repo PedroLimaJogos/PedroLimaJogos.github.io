@@ -2,10 +2,10 @@
 
 import {
   FaHtml5,
-  FaCss3,
+  FaUnity,
   FaJs,
   FaReact,
-  FaFigma,
+  FaPython,
   FaNodeJs,
 } from "react-icons/fa";
 
@@ -41,7 +41,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "Experiência Profissional",
   description:
-    "Todas as experiências que tive o prazer de vivenciar moldaram o profissional que sou hoje.",
+    "Todas as experiências que tive o prazer de vivenciar e que moldaram o profissional que sou hoje.",
   items: [
     {
       company: "DWU - It Solutions",
@@ -64,56 +64,49 @@ const experience = {
 // education data
 const education = {
   icon: "/assets/resume/cap.svg",
-  title: "My education",
+  title: "Minhas Formações",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Instituições que me forneceram instrução formal",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
+      institution: "Ebac",
+      degree: "Game Design e Desenvolvimento Unity",
+      duration: "2022 - 2024",
     },
     {
-      institution: "Codecademy",
-      degree: "Front-end Track",
-      duration: "2022",
+      institution: "Senac",
+      degree: "Análise e Desenv. de Sistemas",
+      duration: "2022 - 2025",
     },
     {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2020 - 2021",
-    },
-    {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019",
-    },
-    {
-      institution: "Design School",
-      degree: "Diploma in Graphic Design",
-      duration: "2016 - 2018",
-    },
-    {
-      institution: "Community College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2014 - 2016",
+      institution: "Laureate Brasil",
+      degree: "Game Design",
+      duration: "2020",
     },
   ],
 };
 
 // skills data
 const skills = {
-  title: "My skills",
+  title: "Conhecimentos",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Ferramentas que auxiliam no meu trabalho",
   skillList: [
     {
-      icon: <FaHtml5 />,
-      name: "html 5",
+      icon: <FaUnity />,
+      name: "Unity",
     },
     {
-      icon: <FaCss3 />,
-      name: "css 3",
+      icon: <img src="/unreal.png" alt="Unreal Engine" className="w-16 h-16" />,
+      name: "Unreal Engine",
+    },
+    {
+      icon: <img src="/blender.png" alt="Unreal Engine" className="w-16 h-16" />,
+      name: "Blender",
+    },
+    {
+      icon: <FaHtml5 />,
+      name: "Html 5",
     },
     {
       icon: <FaJs />,
@@ -121,23 +114,16 @@ const skills = {
     },
     {
       icon: <FaReact />,
-      name: "react.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
+      name: "React Native",
     },
     {
       icon: <SiTailwindcss />,
-      name: "tailwind.css",
+      name: "Tailwind.css",
     },
+    
     {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
-    {
-      icon: <FaFigma />,
-      name: "figma",
+      icon: <FaPython />,
+      name: "Python",
     },
   ],
 };
@@ -177,7 +163,7 @@ const Resume = () => {
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[0vh] w-full">
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">

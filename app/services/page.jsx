@@ -1,44 +1,48 @@
 "use client";
 
-import { BsArrowDownRight } from "react-icons/bs";
+import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip"; // Certifique-se de que o Tooltip está corretamente configurado
 
 const services = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Full Stack Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Experiência sólida no desenvolvimento de aplicativos utilizando React Native, com conhecimento em back-end e front-end, garantindo soluções completas e otimizadas.",
     href: "",
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: "Game Designer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Habilidade na elaboração de documentação técnica, criação de mecânicas de jogo inovadoras e no desenvolvimento de conceitos para proporcionar experiências imersivas.",
     href: "",
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Unity Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Especializado no desenvolvimento com Unity, incluindo a criação de jogos 3D e otimização de performance.",
     href: "",
   },
   {
     num: "04",
-    title: "SEO",
+    title: "Game Tester",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Experiência abrangente com jogos em diferentes plataformas e gêneros.",
     href: "",
   },
 ];
 
-import { motion } from "framer-motion";
-
 const Services = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+      <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 text-center mb-20">
+        Funções Possíveis
+      </h2>
+
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -59,12 +63,18 @@ const Services = () => {
                   <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
                   </div>
-                  <Link
-                    href={service.href}
-                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
-                  >
-                    <BsArrowDownRight className="text-primary text-3xl" />
-                  </Link>
+                  {index === 0 && (
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center">
+                          <FaCheck className="text-primary text-3xl" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Emprego atual</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  )}
                 </div>
                 {/* title */}
                 <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
