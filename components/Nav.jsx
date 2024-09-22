@@ -2,27 +2,32 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
-const links = [
-  {
-    name: "Início",
-    path: "#home",
-  },
-  {
-    name: "Funções",
-    path: "#services",
-  },
-  {
-    name: "Sobre",
-    path: "#resume",
-  },
-  {
-    name: "Trabalhos",
-    path: "#work",
-  },
+const linksPT = [
+  { name: "Início", path: "#home" },
+  { name: "Funções", path: "#services" },
+  { name: "Sobre", path: "#resume" },
+  { name: "Trabalhos", path: "#work" },
+];
+
+const linksEN = [
+  { name: "Home", path: "#home" },
+  { name: "Features", path: "#services" },
+  { name: "About Me", path: "#resume" },
+  { name: "Works", path: "#work" },
 ];
 
 const Nav = () => {
+  const [language, setLanguage] = useState("PT");
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("appLanguage");
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+  const links = language === "PT" ? linksPT : linksEN;
   const pathname = usePathname();
 
   const handleLinkClick = (e, id) => {

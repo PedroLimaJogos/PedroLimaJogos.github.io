@@ -1,27 +1,34 @@
 "use client";
 
 import CountUp from "react-countup";
+import { useEffect, useState } from "react";
 
-const stats = [
-  {
-    num: 1,
-    text: "Ano de experiência",
-  },
-  {
-    num: 2,
-    text: "Projetos concluídos",
-  },
-  {
-    num: 8,
-    text: "Tecnologias aprendidas",
-  },
-  {
-    num: 3,
-    text: "Cursos e Formações",
-  },
+const statsPT = [
+  { num: 1, text: "Ano de experiência" },
+  { num: 2, text: "Projetos concluídos" },
+  { num: 8, text: "Tecnologias aprendidas" },
+  { num: 3, text: "Cursos e Formações" },
+];
+
+const statsEN = [
+  { num: 1, text: "Years of Experience" },
+  { num: 2, text: "Completed Projects" },
+  { num: 8, text: "Technologies Learned" },
+  { num: 3, text: "Courses and Training" },
 ];
 
 const Stats = () => {
+  const [language, setLanguage] = useState("PT");
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("appLanguage");
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+  const stats = language === "PT" ? statsPT : statsEN; // Ajuste aqui
+
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
       <div className="container mx-auto">

@@ -10,9 +10,10 @@ import {
 } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { useEffect,useState } from "react";
 
 // about data
-const about = {
+const aboutPT = {
   title: "Sobre mim",
   description:
     "Trabalhando para criar jogos que eu possa me orgulhar",
@@ -35,9 +36,32 @@ const about = {
     },
   ],
 };
+const aboutEN = {
+  title: "About Me",
+  description:
+    "Working to create games I can be proud of",
+  info: [
+    {
+      fieldName: "Name",
+      fieldValue: "Pedro Henrique J de Lima",
+    },
+    {
+      fieldName: "Mobile",
+      fieldValue: "(+51) 993337557",
+    },
+    {
+      fieldName: "Experience",
+      fieldValue: "1 Year",
+    },
+    {
+      fieldName: "Languages",
+      fieldValue: "Portuguese, English",
+    },
+  ],
+};
 
 // experience
-const experience = {
+const experiencePT = {
   icon: "/assets/resume/badge.svg",
   title: "Experiência Profissional",
   description:
@@ -60,9 +84,32 @@ const experience = {
     },
   ],
 };
+const experienceEN = {
+  icon: "/assets/resume/badge.svg",
+  title: "Professional Experience",
+  description:
+    "All the experiences that have shaped me into the professional I am today.",
+  items: [
+    {
+      company: "DWU - It Solutions",
+      position: "React Native Developer",
+      duration: "2024 - Present",
+    },
+    {
+      company: "Freelancer",
+      position: "2D Artist/Animator",
+      duration: "2022 - 2024",
+    },
+    {
+      company: "Hospital Cristo Redentor",
+      position: "Administrative Assistant",
+      duration: "2020 - 2022",
+    },
+  ],
+};
 
 // education data
-const education = {
+const educationPT = {
   icon: "/assets/resume/cap.svg",
   title: "Minhas Formações",
   description:
@@ -85,12 +132,34 @@ const education = {
     },
   ],
 };
+const educationEN = {
+  icon: "/assets/resume/cap.svg",
+  title: "My Education",
+  description:
+    "Institutions that provided me with formal education",
+  items: [
+    {
+      institution: "Ebac",
+      degree: "Game Design and Unity Development",
+      duration: "2022 - 2024",
+    },
+    {
+      institution: "Senac",
+      degree: "Systems Analysis and Development",
+      duration: "2022 - 2025",
+    },
+    {
+      institution: "Laureate Brasil",
+      degree: "Game Design",
+      duration: "2020",
+    },
+  ],
+};
 
 // skills data
-const skills = {
-  title: "Conhecimentos",
-  description:
-    "Ferramentas que auxiliam no meu trabalho",
+const createSkills = (title, description) => ({
+  title,
+  description,
   skillList: [
     {
       icon: <FaUnity />,
@@ -101,16 +170,16 @@ const skills = {
       name: "Unreal Engine",
     },
     {
-      icon: <img src="/blender.png" alt="Unreal Engine" className="w-16 h-16" />,
+      icon: <img src="/blender.png" alt="Blender" className="w-16 h-16" />,
       name: "Blender",
     },
     {
       icon: <FaHtml5 />,
-      name: "Html 5",
+      name: "HTML5",
     },
     {
       icon: <FaJs />,
-      name: "javascript",
+      name: "JavaScript",
     },
     {
       icon: <FaReact />,
@@ -120,13 +189,15 @@ const skills = {
       icon: <SiTailwindcss />,
       name: "Tailwind.css",
     },
-    
     {
       icon: <FaPython />,
       name: "Python",
     },
   ],
-};
+});
+
+const skillsPT = createSkills("Conhecimentos", "Ferramentas que auxiliam no meu trabalho");
+const skillsEN = createSkills("Skills", "Tools that assist in my work");
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -141,6 +212,21 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
 const Resume = () => {
+
+  const [language, setLanguage] = useState("PT");
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("appLanguage");
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+  const education = language === "PT" ? educationPT : educationEN;
+  const experience = language === "PT" ? experiencePT : experienceEN;
+  const about = language === "PT" ? aboutPT : aboutEN;
+  const skills = language === "PT" ? skillsPT : skillsEN;
+  
   return (
     <motion.div
       initial={{ opacity: 0 }}

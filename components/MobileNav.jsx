@@ -1,33 +1,38 @@
 "use client";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { Button } from "./ui/button";
 
 
-const links = [
-  {
-    name: "Inicio",
-    path: "#",
-  },
-  {
-    name: "Funções",
-    path: "#services",
-  },
-  {
-    name: "Sobre",
-    path: "#resume",
-  },
-  {
-    name: "Trabalhos",
-    path: "#work",
-  },
+const linksPT = [
+  { name: "Início", path: "#home" },
+  { name: "Funções", path: "#services" },
+  { name: "Sobre", path: "#resume" },
+  { name: "Trabalhos", path: "#work" },
+];
+
+const linksEN = [
+  { name: "Home", path: "#home" },
+  { name: "Features", path: "#services" },
+  { name: "About Me", path: "#resume" },
+  { name: "Works", path: "#work" },
 ];
 
 
 const MobileNav = () => {
+  const [language, setLanguage] = useState("PT");
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("appLanguage");
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+  const links = language === "PT" ? linksPT : linksEN;
   const pathname = usePathname();
   return (
     <Sheet>

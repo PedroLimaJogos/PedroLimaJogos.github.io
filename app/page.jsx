@@ -41,6 +41,17 @@ export const useInView = () => {
 };
 
 const Home = () => {
+
+  const [language, setLanguage] = useState("PT");
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("appLanguage");
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+
   // Estados que controlam se a animação já foi feita para cada seção
   const [hasAnimated1, setHasAnimated1] = useState(false);
   const [hasAnimated2, setHasAnimated2] = useState(false);
@@ -71,16 +82,18 @@ const Home = () => {
       <div className="container mx-auto h-full flex items-center justify-center relative z-10"> {/* z-10 para garantir que fique acima da sobreposição */}
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Game Designer e Desenvolvedor Unity</span>
+            <span className="text-xl">{language === "PT" ? "Game Designer e Desenvolvedor Unity" : "Game Designer and Unity Developer"}</span>
             <h1 className="h1 mb-6">
-              Olá! Eu sou <br /> <span className="text-accent">Pedro Lima</span>
+            {language === "PT" ? "Olá! Eu sou " : "Hello! I'm "}<br /> <span className="text-accent">Pedro Lima</span>
             </h1>
             <p className="z-10 max-w-[500px] mb-9 text-white">
-              Desenvolvedor de jogos determinado a desenvolver as melhores experiências possíveis
+              {language === "PT" ? "Entusiasta de jogos determinado a desenvolver as melhores experiências possíveis " : 
+                "Game enthusiast determined to create the best possible experiences"}
+              
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="/PedroLimaCD.pdf" target="_blank" rel="noopener noreferrer">
-                <Button>Currículo</Button>
+                <Button>{language === "PT" ? "Currículo":"Resume"} </Button>
               </a>
               <div className="mb-8 xl:mb-0">
                 <Social
