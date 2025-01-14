@@ -16,25 +16,26 @@ const servicesPT = [
   },
   {
     num: "02",
+    title: "Desenvolvedor Front-End",
+    description:
+      "Experiência abrangente com desenvolvimento de sites tanto para Mobile quanto para desktop.",
+    href: "",
+  },
+  {
+    num: "03",
     title: "Game Designer",
     description:
       "Habilidade na elaboração de documentação técnica, criação de mecânicas de jogo inovadoras e no desenvolvimento de conceitos para proporcionar experiências imersivas.",
     href: "",
   },
   {
-    num: "03",
+    num: "04",
     title: "Desenvolvedor Unity",
     description:
       "Especializado no desenvolvimento com Unity, incluindo a criação de jogos 3D e otimização de performance.",
     href: "",
   },
-  {
-    num: "04",
-    title: "Game Tester",
-    description:
-      "Experiência abrangente com jogos em diferentes plataformas e gêneros.",
-    href: "",
-  },
+  
 ];
 
 const servicesEN = [
@@ -47,25 +48,26 @@ const servicesEN = [
   },
   {
     num: "02",
+    title: "Front-end Developer",
+    description:
+      "Extensive experience with development of websites on both mobile and desktop",
+    href: "",
+  },
+  {
+    num: "03",
     title: "Game Designer",
     description:
       "Skilled in drafting technical documentation, creating innovative game mechanics, and developing concepts to provide immersive experiences.",
     href: "",
   },
   {
-    num: "03",
+    num: "04",
     title: "Unity Developer",
     description:
       "Specialized in development with Unity, including the creation of 3D games and performance optimization.",
     href: "",
   },
-  {
-    num: "04",
-    title: "Game Tester",
-    description:
-      "Extensive experience with games across different platforms and genres.",
-    href: "",
-  },
+  
 ];
 
 const Services = () => {
@@ -81,7 +83,7 @@ const Services = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 text-center mb-20">
-        {language === "PT" ? "Funções Possíveis" : "Possible Roles"}
+        {language === "PT" ? "Funções" : "Roles"}
       </h2>
 
       <div className="container mx-auto">
@@ -104,7 +106,7 @@ const Services = () => {
                   <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
                   </div>
-                  {index === 0 && (
+                  {index === 4 && (
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center">

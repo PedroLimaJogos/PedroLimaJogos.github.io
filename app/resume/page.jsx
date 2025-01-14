@@ -16,7 +16,7 @@ import { useEffect,useState } from "react";
 const aboutPT = {
   title: "Sobre mim",
   description:
-    "Trabalhando para criar jogos que eu possa me orgulhar",
+    "Trabalhando para soluções inovadoras",
   info: [
     {
       fieldName: "Nome",
@@ -39,7 +39,7 @@ const aboutPT = {
 const aboutEN = {
   title: "About Me",
   description:
-    "Working to create games I can be proud of",
+    "Working to create inovative solutions",
   info: [
     {
       fieldName: "Name",
@@ -68,9 +68,14 @@ const experiencePT = {
     "Todas as experiências que tive o prazer de vivenciar e que moldaram o profissional que sou hoje.",
   items: [
     {
+      company: "Kreativitas",
+      position: "Desenvolvedor Unity",
+      duration: "2024 - Atual",
+    },
+    {
       company: "DWU - It Solutions",
       position: "Desenvolvedor React Native",
-      duration: "2024 - Atual",
+      duration: "2024 - 2024",
     },
     {
       company: "Freelancer",
@@ -91,9 +96,14 @@ const experienceEN = {
     "All the experiences that have shaped me into the professional I am today.",
   items: [
     {
+      company: "Kreativitas",
+      position: "Unity Developer",
+      duration: "2024 - Present",
+    },
+    {
       company: "DWU - It Solutions",
       position: "React Native Developer",
-      duration: "2024 - Present",
+      duration: "2024 - 2024",
     },
     {
       company: "Freelancer",

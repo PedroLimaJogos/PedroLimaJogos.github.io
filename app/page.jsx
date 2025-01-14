@@ -87,8 +87,8 @@ const Home = () => {
             {language === "PT" ? "Olá! Eu sou " : "Hello! I'm "}<br /> <span className="text-accent">Pedro Lima</span>
             </h1>
             <p className="z-10 max-w-[500px] mb-9 text-white">
-              {language === "PT" ? "Entusiasta de jogos determinado a desenvolver as melhores experiências possíveis " : 
-                "Game enthusiast determined to create the best possible experiences"}
+              {language === "PT" ? "Desenvolvedor apaixonado pela área de tecnologia com experiência em diversas áreas." : 
+                "Passionate developer with experience across various areas of technology. "}
               
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">

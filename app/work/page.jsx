@@ -29,18 +29,29 @@ const projectsPT = [
     stack: [{ name: "C#" }, { name: "Game Design" }, { name: "Efeitos Visuais" }],
     image: "/assets/work/unity1.png",
     live: "",
-    github: "https://github.com/PedroLimaJogos/3D_Platformer",
+    github: "",
   },
   {
     num: "02",
     category: "Unity",
-    title: "Plataforma 3D",
+    title: "Snake vs Human",
     description:
-      "Jogo de plataforma 3D criado para aprendizado sobre a plataforma Unity",
-    stack: [{ name: "State Machine" }, { name: "Animações" }, { name: "Entidades" }],
-    image: "/assets/work/unity2.png",
+      "Auxilio no desenvolvimento de jogo",
+    stack: [{ name: "C#" }, { name: "Animações" }, { name: "Agile work" }],
+    image: "/assets/work/SvH.png",
     live: "",
-    github: "https://github.com/PedroLimaJogos/3D_Platformer",
+    github: "",
+  },
+  {
+    num: "03",
+    category: "SAP CRM",
+    title: "CrmOne",
+    description:
+      "Auxilio no desenvolvimento de aplicativo de gerenciamento",
+    stack: [{ name: "SAP" }, { name: "Mobile" }, { name: "ReactNative" }],
+    image: "/assets/work/CrmOne.png",
+    live: "",
+    github: "",
   },
 ];
 
@@ -54,18 +65,29 @@ const projectsEN = [
     stack: [{ name: "C#" }, { name: "Game Design" }, { name: "Visual Effects" }],
     image: "/assets/work/unity1.png",
     live: "",
-    github: "https://github.com/PedroLimaJogos/3D_Platformer",
+    github: "",
   },
   {
     num: "02",
     category: "Unity",
-    title: "Plataforma 3D",
+    title: "Snake vs Human",
     description:
-      "3D platformer game created to learn about the Unity platform.",
-    stack: [{ name: "State Machine" }, { name: "Animations" }, { name: "Entities" }],
-    image: "/assets/work/unity2.png",
+      "Assistance in the development of a mobile game",
+    stack: [{ name: "C#" }, { name: "Animações" }, { name: "Agile work" }],
+    image: "/assets/work/SvH.png",
     live: "",
-    github: "https://github.com/PedroLimaJogos/3D_Platformer",
+    github: "",
+  },
+  {
+    num: "03",
+    category: "SAP CRM",
+    title: "CrmOne",
+    description:
+      "Assistance in the development of a management application",
+    stack: [{ name: "SAP" }, { name: "Mobile" }, { name: "ReactNative" }],
+    image: "/assets/work/CrmOne.png",
+    live: "",
+    github: "",
   },
 ];
 
@@ -145,17 +167,17 @@ const Work = () => {
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => (
-                <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                <SwiperSlide key={index} className="w-full bg-[#232329]">
+                  <div className="h-[460px] relative group flex justify-center items-center bg-[#232329]">
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                     <div className="relative w-full h-full">
-                      <Image
-                        src={project.image}
-                        fill
-                        sizes="(max-width: 1280px) 100vw, (max-width: 1980px) 50vw, 33vw"
-                        className="object-cover"
-                        alt=""
-                      />
+                    <Image
+                      src={project.image}
+                      fill
+                      sizes="(orientation: portrait) 100vw, (max-width: 1280px) 100vw, (max-width: 1980px) 50vw, 33vw" 
+                      className="object-contain"
+                      alt=""
+                    />
                     </div>
                   </div>
                 </SwiperSlide>
